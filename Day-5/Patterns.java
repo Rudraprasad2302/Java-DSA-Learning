@@ -127,6 +127,27 @@ public class Patterns {
         }
 
     }
+
+    public static void diamond(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=(n-i); j++){
+                System.out.print(" "+" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=(n-i); j++){
+                System.out.print(" "+" ");
+            }
+            for(int j=1; j<=(2*i)-1; j++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    }
  
     public static void main(String[] args) {
         //holRect(10, 10);
@@ -136,6 +157,7 @@ public class Patterns {
         //zero_one_triangle(5);
         //butterfly_pattern(5);
         //rhombus(8);
-        hollow_rhombus(5);
+        //hollow_rhombus(5);
+        diamond(5);
     }
 }
