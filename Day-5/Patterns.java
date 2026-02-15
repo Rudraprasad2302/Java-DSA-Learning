@@ -97,6 +97,18 @@ public class Patterns {
         }
 
     }
+
+    public static void rhombus(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=(n-i); j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=n; j++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    }
  
     public static void main(String[] args) {
         //holRect(10, 10);
@@ -104,6 +116,7 @@ public class Patterns {
         //inverted_half_pyramid_withNumbers(6);
         //floyds_triangle(7);
         //zero_one_triangle(5);
-        butterfly_pattern(5);
+        //butterfly_pattern(5);
+        rhombus(8);
     }
 }
