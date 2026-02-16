@@ -150,14 +150,14 @@ public class Patterns {
     }
  
     public static void main(String[] args) {
-        //holRect(10, 10);
-        //inverted_totated_half_pyramid(10);
-        //inverted_half_pyramid_withNumbers(6);
-        //floyds_triangle(7);
-        //zero_one_triangle(5);
-        //butterfly_pattern(5);
-        //rhombus(8);
-        //hollow_rhombus(5);
+        holRect(10, 10);
+        inverted_totated_half_pyramid(10);
+        inverted_half_pyramid_withNumbers(6);
+        floyds_triangle(7);
+        zero_one_triangle(5);
+        butterfly_pattern(5);
+        rhombus(8);
+        hollow_rhombus(5);
         diamond(5);
     }
 }
