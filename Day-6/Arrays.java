@@ -47,10 +47,23 @@ public class Arrays {
         return -1;
 
     }
+
+    public static void reverse(int numbers[]){
+        int first = 0;
+        int last = numbers.length-1;
+        while(first < last){
+            int temp = numbers[last];
+            numbers[last]=numbers[first];
+            numbers[first]=temp;
+
+            first++;
+            last--;
+        }
+    }
     public static void main(String[] args) {
         
          int numbers[] = {2, 4, 6, 8, 10, 12, 14, 16};
-         int key =20;
+         //int key =20;
          //for linear searrch
         // int index = linearSearch(numbers, key);
         // if(index == -1){
@@ -65,6 +78,12 @@ public class Arrays {
         // System.out.println("Largest value is "+ largest_smallest_number(numbers));
 
         //binary search
-        System.out.println("index for key is "+binarySearch(numbers, key));
+        //System.out.println("index for key is "+binarySearch(numbers, key));
+
+        reverse(numbers);
+        for(int i=0; i<numbers.length; i++){
+            System.out.print(numbers[i]+" ");
+        }
+        System.out.println();
     }
 }
