@@ -26,11 +26,32 @@ public class Arrays {
         System.out.println("smallest value is "+ smallest);
         return largest;
     }
-    public static void main(String[] args) {
-        //for linear searrch
-        // int numbers[] = {2, 4, 6, 8, 10, 12, 14, 16};
-        // int key =20;
 
+    public static int binarySearch(int numbers[], int key){
+        int start=0, end = numbers.length-1;
+
+        while (start <= end) {
+            int mid = (start + end)/2;
+
+            if(numbers[mid] == key){
+                return mid;
+            }
+            else if(numbers[mid] < key){
+                start = mid+1;
+            }
+            else{
+                end = mid-1;
+            }
+            
+        }
+        return -1;
+
+    }
+    public static void main(String[] args) {
+        
+         int numbers[] = {2, 4, 6, 8, 10, 12, 14, 16};
+         int key =20;
+         //for linear searrch
         // int index = linearSearch(numbers, key);
         // if(index == -1){
         //     System.out.println("Key not found");
@@ -40,7 +61,10 @@ public class Arrays {
         // }
 
         //largest in array
-        int numbers[] = {5, 7, 11, 8, 45, 70, 76, 58, 48, 44};
-        System.out.println("Largest value is "+ largest_smallest_number(numbers));
+        // int numbers[] = {5, 7, 11, 8, 45, 70, 76, 58, 48, 44};
+        // System.out.println("Largest value is "+ largest_smallest_number(numbers));
+
+        //binary search
+        System.out.println("index for key is "+binarySearch(numbers, key));
     }
 }
