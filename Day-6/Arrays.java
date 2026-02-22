@@ -82,8 +82,8 @@ public class Arrays {
                 int end = j;
                 for(int k=start; k<=end; k++){
                     System.out.print(numbers[k]+" ");
-                    ts++;
                 }
+                ts++;
                 System.out.println();
             }
             System.out.println();
