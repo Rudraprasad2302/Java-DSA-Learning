@@ -23,17 +23,27 @@ public class Sorting {
         System.out.println();
     }
 
-    public static void selectionSort(int arr[]){
+   public static void selectionSort(int arr[]){
         for(int i=0; i<arr.length-1; i++){
             int minPos = i;
+            boolean swapped = false; // Added to track if a new minimum was found
+
             for(int j=i+1; j<arr.length; j++){
                 if(arr[minPos] > arr[j]){
                     minPos = j;
+                    swapped = true; // Minimum position has changed
                 }
             }
-            int temp = arr[minPos];
-            arr[minPos] = arr[i];
-            arr[i] = temp;
+            
+            // Optimization: Only swap if a smaller element was found
+            if(swapped) {
+                int temp = arr[minPos];
+                arr[minPos] = arr[i];
+                arr[i] = temp;
+                System.out.println("Swapped element at index " + i + " with index " + minPos);
+            } else {
+                System.out.println("Index " + i + " is already in the correct position.");
+            }
         }
     }
     public static void main(String[] args) {
