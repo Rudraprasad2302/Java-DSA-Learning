@@ -85,13 +85,13 @@ public class Sorting {
     }
     public static void main(String[] args) {
         int arr[] = {1, 4, 1, 3, 2, 4, 3, 7};
-        //bubbleSort(arr);
+        bubbleSort(arr);
         //printArr(arr);
-        //selectionSort(arr);
+        selectionSort(arr);
         //printArr(arr);
-        //insertionSort(arr);
+        insertionSort(arr);
         //printArr(arr);
-        //Arrays.sort(arr, 0, 3);
+        Arrays.sort(arr, 0, 3);
         //printArr(arr);
         countingSort(arr);
         printArr(arr);
