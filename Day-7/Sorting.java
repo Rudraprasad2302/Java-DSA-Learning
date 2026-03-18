@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Sorting {
     public static void bubbleSort(int arr[]){
         for(int turn=0; turn<arr.length-1; turn++){
@@ -65,7 +66,9 @@ public class Sorting {
         //printArr(arr);
         //selectionSort(arr);
         //printArr(arr);
-        insertionSort(arr);
+        //insertionSort(arr);
+        //printArr(arr);
+        Arrays.sort(arr, 0, 3);
         printArr(arr);
     }
     
